@@ -18,8 +18,8 @@ for s in sel:
     a.append(s["href"])
 
 for k in range(0,10):
-    print("==================增加 {} 次30頁頁數==================".format(k))
-    test.write("==================增加 {} 次30頁頁數==================\n".format(k)) 
+    print("==================增加 {} 次 30篇文章==================".format(k))
+    test.write("==================增加 {} 次 30篇文章==================\n".format(k)) 
     post_data={
         "before":a[-1][9:18],
         "limit":"30",
@@ -30,6 +30,7 @@ for k in range(0,10):
     for u in range(len(data2)):
         Temporary_url = "/f/sex/p/"+ str(data2[u]["id"]) + "-" + str(data2[u]["title"].replace(" ","-"))
         a.append(Temporary_url)
+    time.sleep(1)
 
 time.sleep(1)
 j=0 #為了印頁數
